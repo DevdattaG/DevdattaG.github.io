@@ -63,12 +63,42 @@
   height:18%;
 }
 
+.info {
+  background-color: white;
+  box-shadow: 1px 1px 15px #ccc;
+  margin: 10px auto;
+  border-radius: 5px;
+  padding: 10px;      
+}
+
 .placeTitle{
   color: black;
-  font-size: large;
+  font-size: x-large;
 }
 
 .placeCountry{
-  font-size: medium;
+  font-size: large;
   color: darkgray;
+}
+
+.infoTitle{
+  color: black;
+  padding-top: 10px;
+  text-align: center;
+  font-size: xx-large;
+}
+
+.infoAddress{
+  color: darkgray;
+  text-align: center;
+  font-size: large;
+}
+
+.description{
+  color: black;    
+  font-size: medium;
+}
+
+.pad10{
+  padding-top: 10px;
 }

@@ -14,10 +14,10 @@
             <div class="row aligner">
             <div class="col-xs-2" style="padding-left:25px">
             	<!-- <i class="backArrow fa fa-arrow-left fa-lg" style="color:#ffffff" aria-hidden="true"></i>     -->
-                <svg fill="#FFFFFF" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0 0h24v24H0z" fill="none"></path>
-      <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"></path>
-    </svg>         	
+            <svg id="backArrow" fill="#FFFFFF" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 0h24v24H0z" fill="none"></path>
+              <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"></path>
+            </svg>         	
             </div>
             <div class="col-xs-10" style="text-align:left">
             	<h1 class="text-left headerText">Tourlist</h1>  
@@ -26,21 +26,65 @@
             </div>
           </header>
           <div style="margin-top:65px"></div>
-          <div id="dataList">
-              
+
+          <!-- Homepage starts -->
+          <div id="homeScreen">                    
+              <div class="section">
+                  <a onclick=hideBackArrow() href="#2">
+                      <div class="row">
+                      <div class="col-xs-6">
+                          <img class= "img-responsive img-rounded" src="./images/Eiffel/Eiffel.jpg" >
+                      </div>
+                      <div class="col-xs-6"></div>
+                      <p class="placeTitle">Eiffel Tower</p>
+                      <p class="placeCountry">Paris</p>
+                      
+                      </div>
+                  </a>
+              </div>   
           </div>
-<!--           <div class="section">
-              <a href="#">
-                  <div class="row">
-                  <div class="col-xs-6">
-                      <img class= "img-responsive img-rounded" src="./images/Eiffel/Eiffel.jpg" >
-                  </div>
-                  <div class="col-xs-6"></div>
-                  <p class="placeTitle">Eiffel Tower</p>
-                  <p class="placeCountry">Paris</p>
-                  </div>
-              </a>
-          </div>     -->      
+          <!-- End of homepage -->       
+          <!-- Info page starts -->
+
+          <div id="infoScreen">                      
+              <div class="info">
+                  <a onclick=hideBackArrow() href="#2">
+                      <div class="row">
+                      <div class="col-xs-12">
+                          <img class= "img-responsive img-rounded" src="./images/Eiffel/Eiffel.jpg" >
+                      </div>
+                      <div class="col-xs-12">
+                      <p class="infoTitle">Eiffel Tower</p>
+                      <p class="infoAddress">Paris, France</p><hr/>                      
+                      </div>
+                      <div class="col-xs-12">
+                      <p class="description">The Eiffel Tower is a wrought iron lattice tower on the Champ de Mars in Paris, France. It is named after the engineer Gustave Eiffel, whose company designed and built the tower. Constructed from 1887–89 as the entrance to the 1889 World's Fair, it was initially criticized by some of France's leading artists and intellectuals for its design, but it has become a global cultural icon of France and one of the most recognisable structures in the world.[3] The Eiffel Tower is the most-visited paid monument in the world; 6.91 million people ascended it in 2015. The tower is 324 metres (1,063 ft) tall, about the same height as an 81-storey building, and the tallest structure in Paris. Its base is square, measuring 125 metres (410 ft) on each side. During its construction, the Eiffel Tower surpassed the Washington Monument to become the tallest man-made structure in the world, a title it held for 41 years until the Chrysler Building in New York City was finished in 1930. Due to the addition of a broadcasting aerial at the top of the tower in 1957, it is now taller than the Chrysler Building by 5.2 metres (17 ft). Excluding transmitters, the Eiffel Tower is the second-tallest structure in France after the Millau Viaduct. The tower has three levels for visitors, with restaurants on the first and second levels. The top level's upper platform is 276 m (906 ft) above the ground – the highest observation deck accessible to the public in the European Union. Tickets can be purchased to ascend by stairs or lift (elevator) to the first and second levels. The climb from ground level to the first level is over 300 steps, as is the climb from the first level to the second. Although there is a staircase to the top level, it is usually only accessible by lift.</p>                                        
+                      </div>                      
+                      </div>
+                      <div class="row">   
+                      <div class="col-xs-12">  <hr/>                 
+                      <p class="infoAddress" style="color:black; font-size:x-large">Gallery</p>
+                      </div>
+                          <div class="col-xs-12 pad10">
+                              <img class= "img-responsive img-rounded" src="./images/Eiffel/Eiffel1.jpg" >
+                          </div>
+                          <div class="col-xs-12 pad10">
+                              <img class= "img-responsive img-rounded" src="./images/Eiffel/Eiffel2.jpg" >
+                          </div>
+                          <div class="col-xs-12 pad10">
+                              <img class= "img-responsive img-rounded" src="./images/Eiffel/Eiffel3.jpg" >
+                          </div>
+                          <div class="col-xs-12 pad10">
+                              <img class= "img-responsive img-rounded" src="./images/Eiffel/Eiffel4.jpg" >
+                          </div>
+                      </div>
+
+                      
+                  </a>
+              </div>   
+          </div>
+          <!-- End of info page -->
+
         </div>
     </div>
 </body>

@@ -1,0 +1,30 @@
+[{
+	"id": "1",	
+	"name": "Taj Mahal",	
+	"country": "India",
+	"imageUrl":"images/Taj/Taj.jpg"
+},
+{
+	"id": "2",	
+	"name": "Eiffel Tower",	
+	"country": "France",
+	"imageUrl":"images/Eiffel/Eiffel.jpg"	
+},
+{
+	"id": "3",	
+	"name": "Great Pyramid of Giza",	
+	"country": "Egypt",
+	"imageUrl":"images/Pyramid/Pyramid.jpg"		
+},
+{
+	"id": "4",	
+	"name": "Mount Everest",	
+	"country": "Nepal",
+	"imageUrl":"images/Everest/Everest.jpg"	
+},
+{
+	"id": "5",	
+	"name": "Angel Falls",	
+	"country": "Venezuela",
+	"imageUrl":"images/Angel/Angel.jpg"
+}]

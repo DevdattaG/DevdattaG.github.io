@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/DevdattaG/DevdattaG.github.io/issues"
   },
-  "homepage": "https://github.com/DevdattaG/DevdattaG.github.io#readme"
+  "homepage": "https://github.com/DevdattaG/DevdattaG.github.io#readme",
+  "dependencies": {
+    "sw-toolbox": "^3.6.0"
+  }
 }

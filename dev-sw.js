@@ -7,18 +7,17 @@
   // Turn on debug logging, visible in the Developer Tools' console.
   global.toolbox.options.debug = true;
 
-  toolbox.precache([ './index.html', 
-                     './index.html#1',
-                     './index.html#2',
-                     './index.html#3',
-                     './index.html#4',
-                     './index.html#5',
-                     './index.html#6',    
+  toolbox.precache([ './index.html',                        
                      './js/jquery-1.9.1.min.js',
                      './js/bootstrap.min.js',
                      './styles/bootstrap.min.css',
                      './styles/styles.css',                     
-                     './js/app.js'
+                     './js/app.js',
+                     './data/data1.json',
+                     './data/data2.json',
+                     './data/data3.json',
+                     './data/data4.json',
+                     './data/data5.json'
                      ]);
 
   // The route for the images

@@ -13,7 +13,7 @@
                      './styles/bootstrap.min.css',
                      './styles/styles.css',                     
                      './js/app.js',
-                     './data/*'
+                     './data'
                      ]);
 
   // The route for the images

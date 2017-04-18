@@ -31,7 +31,7 @@ function fetchData(){
 }
 
 function showData(id,image,name,country){	
-	return '<div class="section"><a onclick=showInfoScreen('+id+'); href="#'+id+'"><div class="row"><div class="col-xs-6"><img class= "img-responsive img-rounded" src="./'+image+'" ></div><div class="col-xs-6"></div><p class="placeTitle">'+name+'</p><p class="placeCountry">'+country+'</p></div></a></div>';	
+	return '<div class="section"><a onclick=showInfoScreen('+id+'); href="#'+id+'"><div class="row"><div class="col-xs-6"><img class= "img-responsive img-rounded homeImages" src="./'+image+'" ></div><div class="col-xs-6"></div><p class="placeTitle">'+name+'</p><p class="placeCountry">'+country+'</p></div></a></div>';	
 }
 
 function showImageGallery(image){

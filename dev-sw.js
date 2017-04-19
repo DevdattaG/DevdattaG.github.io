@@ -8,6 +8,11 @@
   global.toolbox.options.debug = true;
 
   toolbox.precache([ './index.html',                        
+                     './index.html#1',
+                     './index.html#2',
+                     './index.html#3',
+                     './index.html#4',
+                     './index.html#5',
                      './js/jquery-1.9.1.min.js',
                      './js/bootstrap.min.js',
                      './styles/bootstrap.min.css',

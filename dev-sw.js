@@ -71,6 +71,9 @@
   global.addEventListener('activate', event => event.waitUntil(global.clients.claim()));
 })(self);
 var CACHE_VERSION = 'dev-app-v1';
+var CACHE_FILES = [
+    '/'      
+];
 self.addEventListener('install', function(event){
   console.log(event);
     event.waitUntil(

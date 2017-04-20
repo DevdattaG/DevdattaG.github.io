@@ -26,7 +26,39 @@
                      ]);
 
   // The route for the images
-  toolbox.router.get('./images/(*)/(.*)', global.toolbox.cacheFirst, {
+  toolbox.router.get('./images/Taj/(.*)', global.toolbox.cacheFirst, {
+    cache: {
+          name: 'jpg',
+          maxEntries: 100,
+          maxAgeSeconds: 86400 // cache for a day
+        }
+  });   
+
+  toolbox.router.get('./images/Everest/(.*)', global.toolbox.cacheFirst, {
+    cache: {
+          name: 'jpg',
+          maxEntries: 100,
+          maxAgeSeconds: 86400 // cache for a day
+        }
+  });   
+
+  toolbox.router.get('./images/Angel/(.*)', global.toolbox.cacheFirst, {
+    cache: {
+          name: 'jpg',
+          maxEntries: 100,
+          maxAgeSeconds: 86400 // cache for a day
+        }
+  });   
+
+  toolbox.router.get('./images/Eiffel/(.*)', global.toolbox.cacheFirst, {
+    cache: {
+          name: 'jpg',
+          maxEntries: 100,
+          maxAgeSeconds: 86400 // cache for a day
+        }
+  });   
+
+  toolbox.router.get('./images/Pyramid/(.*)', global.toolbox.cacheFirst, {
     cache: {
           name: 'jpg',
           maxEntries: 100,

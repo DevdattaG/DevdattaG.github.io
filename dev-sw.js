@@ -70,22 +70,61 @@
   global.addEventListener('install', event => event.waitUntil(global.skipWaiting()));
   global.addEventListener('activate', event => event.waitUntil(global.clients.claim()));
 })(self);
-
-this.addEventListener('fetch', event => {
-  // request.mode = navigate isn't supported in all browsers
-  // so include a check for Accept: text/html header.
-  if (event.request.mode === 'navigate' || (event.request.method === 'GET' && event.request.headers.get('accept').includes('text/html'))) {
-        event.respondWith(
-          fetch(event.request.url).catch(error => {
-              var cachedFile = getFilenameFromUrl(event.request.url);
-              // Return the offline page
-              return caches.match(cachedFile);
-          })
+var CACHE_VERSION = 'dev-app-v1';
+self.addEventListener('install', function(event){
+  console.log(event);
+    event.waitUntil(
+        caches.open(CACHE_VERSION)
+        .then(function(cache){
+            console.log("cache opened");
+            return cache.addAll(CACHE_FILES);
+        })
     );
-  }
+    
 });
 
-function getFilenameFromUrl(path){
-    path = path.substring(path.lastIndexOf("/")+ 1);
-    return (path.match(/[^.]+(\.[^?#]+)?/) || [])[0];
+self.addEventListener('activate', function (event) {
+    event.waitUntil(
+        caches.keys().then(function(keys){
+            return Promise.all(keys.map(function(key, i){
+                if(key !== CACHE_VERSION){
+                    return caches.delete(keys[i]);
+                }
+            }))
+        })
+    )
+});
+
+self.addEventListener('fetch', function (event) {
+    event.respondWith(
+        caches.match(event.request).then(function(res){
+            if(res){
+                return res;
+            }
+            requestBackend(event);
+        })
+    )
+});
+
+function requestBackend(event){
+    var url = event.request.clone();
+    return fetch(url).then(function(res){
+        //if not a valid response send the error
+        if(!res || res.status !== 200 || res.type !== 'basic'){
+            return res;
+        }
+
+        var response = res.clone();
+
+        caches.open(CACHE_VERSION).then(function(cache){
+            cache.put(event.request, response);
+        });
+
+        return res;
+    })
 }
+
+// function getFilenameFromUrl(path){
+//     path = path.substring(path.lastIndexOf("/")+ 1);
+//     return (path.match(/[^.]+(\.[^?#]+)?/) || [])[0];
+// }

@@ -26,7 +26,7 @@
                      ]);
 
   // The route for the images
-  toolbox.router.get('./images/(.*)', global.toolbox.cacheFirst, {
+  toolbox.router.get('./images/(*)/(.*)', global.toolbox.cacheFirst, {
     cache: {
           name: 'jpg',
           maxEntries: 100,
